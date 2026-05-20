@@ -4,7 +4,7 @@
 
 Reusable Codex skill for generating images with `gpt-image-2`.
 
-It works with both the official OpenAI API and any OpenAI-compatible relay/proxy endpoint, as long as the Images API format is compatible.
+It works with both the official OpenAI API and OpenAI-compatible relay/proxy or middle-platform endpoints, as long as the Images API format is compatible and the endpoint actually exposes the `gpt-image-2` model.
 
 The repo itself stays secret-safe: real `base_url` values are configured locally, and API keys are read from environment variables.
 
@@ -26,7 +26,7 @@ Go into the installed skill directory and create a local config file:
 python scripts/install_config.py --base-url https://your-endpoint.example/v1 --api-key-env OPENAI_API_KEY
 ```
 
-This can be an OpenAI endpoint, or a compatible relay/middle-platform API.
+This can be an OpenAI endpoint, or a compatible relay/middle-platform API that provides the `gpt-image-2` model.
 
 Then set your API key:
 
@@ -45,12 +45,6 @@ $env:OPENAI_API_KEY="your_api_key"
 ```bash
 python scripts/generate_image.py --prompt "A scientific diagram of a pacemaker" --output output.png
 ```
-
-## Security Model
-
-- Commit `config.example.json`, never `config.local.json`
-- Keep API keys in environment variables
-- Configure the real endpoint at install time
 
 ## Published Skill
 
