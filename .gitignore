@@ -1,0 +1,4 @@
+skills/gpt-image-2-generator/config.local.json
+skills/gpt-image-2-generator/__pycache__/
+skills/gpt-image-2-generator/scripts/__pycache__/
+*.pyc

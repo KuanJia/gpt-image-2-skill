@@ -1,0 +1,4 @@
+interface:
+  display_name: "GPT Image 2 Generator"
+  short_description: "Generate images with gpt-image-2 via OpenAI-compatible APIs"
+  default_prompt: "Use $gpt-image-2-generator to generate an image with a configured OpenAI-compatible image endpoint."
